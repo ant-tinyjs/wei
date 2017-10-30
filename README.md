@@ -1,6 +1,6 @@
 # tiny-templete
 
-> The H5 App build by Luna
+> The H5 App build by Tiny
 
 ## 命令
 
