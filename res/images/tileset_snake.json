@@ -1,0 +1,33 @@
+{
+	"meta": {
+		"image": "tileset_snake.png",
+		"size": {"w":995,"h":836},
+		"scale": "1"
+	},
+	"frames": {
+		"star.png":
+		{
+			"frame": {"x":2,"y":2,"w":888,"h":832},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":888,"h":832},
+			"sourceSize": {"w":888,"h":832}
+		},
+		"head.png":
+		{
+			"frame": {"x":894,"y":2,"w":99,"h":99},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":99,"h":99},
+			"sourceSize": {"w":99,"h":99}
+		},
+		"part.png":
+		{
+			"frame": {"x":894,"y":105,"w":99,"h":99},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":99,"h":99},
+			"sourceSize": {"w":99,"h":99}
+		}
+	}
+}

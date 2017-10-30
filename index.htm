@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title></title>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="format-detection" content="email=no"/>
+<meta name="Alipay:title" content="The H5 App build by Luna"/>
+<meta name="Alipay:imgUrl" content="https://t.alipayobjects.com/L1/71/10001/20000869/1_0_0_0/1457523811582_icon_L.png"/>
+<meta name="Alipay:desc" content="The H5 App build by Luna"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0"/>
+<style>
+  .version {
+    position: fixed;
+    bottom: 3px;
+    color: #ddd;
+    text-align: center;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+<div class="version" id="J-versionCell"></div>
+
+<script>
+  var main = {
+    init: function () {
+      var versionCell = document.getElementById('J-versionCell');
+      AlipayJSBridge.call('checkApp', {
+        appId: '123456'
+      }, function (app) {
+        app.version && (versionCell.innerHTML = app.version);
+      });
+    }
+  };
+
+  window.AlipayJSBridge ? main.init() : document.addEventListener('AlipayJSBridgeReady', function () {
+    main.init();
+  });
+</script>
+</body>
+</html>
