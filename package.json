@@ -1,11 +1,13 @@
 {
-  "name": "tiny-template",
+  "name": "<%=name%>",
+  "description": "<%=description%>",
+  "author": "<%=author%>",
   "scripts": {
     "dev": "webpack-dev-server --devtool source-map --inline --quiet --hot --host 0.0.0.0 --config ./webpack.config.js",
     "lint": "eslint --fix src/**",
     "build": "webpack -p"
   },
-  "tplType": "wei",
+  "tplType": "offlineTpl",
   "private": true,
   "devDependencies": {
     "autoprefixer": "^7.1.1",
