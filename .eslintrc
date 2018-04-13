@@ -4,12 +4,12 @@
   ],
   "root": true,
   "globals": {
-    "$": true,
-    "Tiny": true,
-    "RESOURCE": true
+    "Tiny": true
   },
   "rules": {
-    "semi": ["error", "always"], //必须使用分号
-    "space-before-function-paren": 0  // function前面的空格没有必要校验
+    "semi": ["error", "always"],
+    "spaced-comment": 0,
+    "space-before-function-paren": 0,
+    "comma-dangle": [1, "always-multiline"]
   }
 }
