@@ -1,8 +1,6 @@
-dist
-*.log
-.idea
-.tmp
+.idea/
 node_modules
+temp
 .DS_Store
-npm-debug.log
-_package
+dist
+/res/images/tilesets
