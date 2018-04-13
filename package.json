@@ -1,7 +1,7 @@
 {
-  "name": "wei",
+  "name": "<%=name%>",
   "version": "0.0.1",
-  "description": "Tiny.js project build from wei template",
+  "description": "<%=description%>",
   "scripts": {
     "start": "webpack-dev-server --mode development --inline --host 0.0.0.0 --port 8017",
     "lint": "eslint src/**",
@@ -9,7 +9,7 @@
     "build": "webpack-cli --mode=production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "yiqi",
+  "author": "<%=author%>",
   "private": true,
   "devDependencies": {
     "babel-loader": "^7.1.4",
