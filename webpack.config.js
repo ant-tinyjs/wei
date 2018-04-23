@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const tilesetDir = 'res/images/tilesets';
@@ -9,7 +8,7 @@ const tilesetDir = 'res/images/tilesets';
 module.exports = (env, argv) => {
   const isDev = argv.mode === 'development';
 
-  const config = {
+  return {
     entry: './src/index.js',
     module: {
       rules: [
@@ -55,9 +54,6 @@ module.exports = (env, argv) => {
       },
     },
     plugins: [
-      new CleanWebpackPlugin([
-        isDev ? tilesetDir : null,
-      ]),
       new OptimizeCSSAssetsPlugin({}),
       new MiniCssExtractPlugin({
         filename: 'index.css',
@@ -78,12 +74,4 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
     },
   };
-
-  if (isDev) {
-    config.plugins.unshift(new CleanWebpackPlugin([
-      tilesetDir,
-    ]));
-  }
-
-  return config;
 };
