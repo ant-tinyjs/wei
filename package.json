@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "<%=description%>",
   "scripts": {
-    "start": "webpack-dev-server --mode development --inline --host 0.0.0.0 --port 8017",
+    "start": "webpack-dev-server --mode development --inline --disable-host-check --host 0.0.0.0 --port 8017",
     "lint": "eslint src/**",
     "prebuild": "rm -rf dist",
     "build": "webpack-cli --mode=production",
