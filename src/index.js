@@ -1,7 +1,7 @@
-require('./css/index.less');
-
 import * as resources from './game/resources';
 import MainMenuLayer from './game/MainMenuLayer';
+
+require('./css/index.less');
 
 Tiny.app = new Tiny.Application({
   showFPS: true,
