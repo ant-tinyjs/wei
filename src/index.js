@@ -3,7 +3,7 @@ require('./css/index.less');
 import * as resources from './game/resources';
 import MainMenuLayer from './game/MainMenuLayer';
 
-var config = {
+Tiny.app = new Tiny.Application({
   showFPS: true,
   referWidth: 375,
   dpi: 2,
@@ -11,9 +11,7 @@ var config = {
   renderOptions: {
     backgroundColor: 0xbbbbbb,
   },
-};
-
-Tiny.app = new Tiny.Application(config);
+});
 
 const main = {
   init () {
