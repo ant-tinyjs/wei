@@ -5,9 +5,9 @@ require('./css/index.less');
 
 Tiny.app = new Tiny.Application({
   showFPS: true,
+  debug: true,
   referWidth: 375,
   dpi: 2,
-  renderType: Tiny.RENDERER_TYPE.CANVAS,
   renderOptions: {
     backgroundColor: 0xbbbbbb,
   },
