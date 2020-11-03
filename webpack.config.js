@@ -61,13 +61,18 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: 'index.html',
       }),
-      new CopyWebpackPlugin([ {
-        from: 'res/images',
-        to: 'res/images',
-      }, {
-        from: 'res/sounds',
-        to: 'res/sounds',
-      } ]),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: 'res/images',
+            to: 'res/images',
+          },
+          {
+            from: 'res/sounds',
+            to: 'res/sounds',
+          },
+        ],
+      }),
     ],
     output: {
       filename: 'index.js',
